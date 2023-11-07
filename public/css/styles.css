@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --background: #171717;
+    --div-primary: #212121;
+    --div-secondary: #454446;
+    --text-primary: #FFFFFF;
+    --text-secondary: #BEBEBE;
+}
+
+body {
+    background: var(--background);
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-primary);
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1.875rem;
+}
+
+container {
+    max-width: 100px;
+}
+
+nav {
+    margin-top: 20px;
+    margin-bottom: 100px;
+}
+
+.navbar__logo {
+    max-height: 40px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.br__8 {
+    border-radius: 8px;
+}
+
+.navbar__link {
+    margin: 0 20px;
+}
+
+.navbar__link>a {
+    text-shadow: 0px 2px 20px #000;
+    font-size: 1.125rem;
+    color: var(--text-primary);
+    font-style: normal;
+    font-weight: 200;
+    line-height: normal;
+    transition: 0.3s all;
+}
+
+.navbar__link>a:hover {
+    color: var(--text-secondary);
+}
+
+.primary__button,
+.secondary__button {
+    font-size: 1rem;
+    font-style: normal;
+    color: var(--text-primary);
+    font-weight: 200;
+    line-height: normal;
+    border: 1px solid var(--div-secondary);
+    background: var(--div-secondary);
+    transition: 0.3s all;
+    padding: 10px 25px;
+    margin: 0 5px;
+    min-width: 130px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.secondary__button {
+    background: none;
+    border: 1px solid var(--div-secondary);
+}
+
+.primary__button:hover,
+.secondary__button:hover {
+    background: var(--div-primary);
+    border: 1px solid var(--div-primary);
+}
+
+#upload__icon {
+    margin-top: -3px;
+    margin-right: 10px;
+}
+
+.header__background {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 320px;
+    max-height: 320px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, #171717 100.68%), url('/images/header__background.png'), #212121;
+    background-blend-mode: normal, screen, normal;
+    background-position: 0 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.container {
+    max-width: 1160px;
+}
+
+.header__description {
+    margin-top: 10px;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 200;
+    line-height: 1.875rem;
+}
