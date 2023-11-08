@@ -47,6 +47,8 @@
     <x-public.header />
     @yield('content')
 
+    @livewireScripts
+
     <script src="{{ asset('js/bootstrap.min.js') }}"></script>
 </body>
 </html>

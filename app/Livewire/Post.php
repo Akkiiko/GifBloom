@@ -2,26 +2,49 @@
 
 namespace App\Livewire;
 
+use App\Models\Likes;
+use App\Models\Post as PostModel;
 use Livewire\Component;
+use Livewire\WithPagination;
 
 class Post extends Component
 {
-    public $post;
+    use WithPagination;
+    public $perPage = 1;
     public $isLiked = false;
 
-    public function mount($post)
+    public function toggleLike(PostModel $post)
     {
-        $this->post = $post;
+        $like = Likes::where('user_id', auth()->id())
+                ->where('post_id', $post->id)
+                ->first();
 
+        if ($like) {
+            $like->delete();
+            $post->decrement('likes');
+        } else {
+            $like = $post->likes()->create([
+                'user_id' => auth()->id(),
+            ]);
+            $post->increment('likes');
+        }
     }
 
-    public function toggleLike()
+    public function loadMore()
     {
-        $this->isLiked = !$this->isLiked;
+        $this->perPage += 2;
     }
 
     public function render()
-    {
-        return view('livewire.post');
+    {        
+        $posts = PostModel::paginate($this->perPage);
+        $userLikedPosts = Likes::where('user_id', auth()->id())
+        ->pluck('post_id')
+        ->all();
+
+        return view('livewire.post', [
+            'posts' => $posts,
+            'userLikedPosts' => $userLikedPosts
+        ]);
     }
 }
