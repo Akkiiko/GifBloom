@@ -16,7 +16,9 @@
             </ul>
             <ul class="navbar-nav">
                 <a class="secondary__button" href=""><img id="upload__icon" width="12" height="12" src="{{ asset('/images/icons/addition.png') }}">Upload</a>
-                <a class="primary__button" href="">Login</a>
+                @if(!Auth::check()) 
+                <a class="primary__button pointer" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
+                @endif
             </ul>
         </div>
     </div>

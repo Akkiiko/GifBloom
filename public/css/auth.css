@@ -1,0 +1,54 @@
+.modal-body,
+.modal-content {
+    background: var(--div-primary);
+    border: none;
+    border-radius: 8px;
+    min-height: 424px;
+}
+
+.modal__image {
+    border-radius: 0.5rem 0rem 0rem 0.5rem;
+    background: url('/images/header__background.png'), #131313;
+    background-blend-mode: screen, normal;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+}
+
+.login__description {
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    color: var(--text-secondary);
+}
+
+.auth__link {
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 200;
+    line-height: normal;
+    text-align: center;
+    color: var(--text-secondary);
+}
+
+.auth__link>a {
+    font-size: 1rem;
+    color: var(--text-primary);
+    text-decoration-line: underline;
+}
+
+label {
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 200;
+    line-height: normal;
+}
+
+.error {
+    color: var(--alert);
+}
+
+.error__border {
+    border: 1px solid var(--alert)
+}

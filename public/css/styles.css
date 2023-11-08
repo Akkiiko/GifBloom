@@ -4,14 +4,48 @@
     --background: #171717;
     --div-primary: #212121;
     --div-secondary: #454446;
+    --div-extra: #39373b;
     --text-primary: #FFFFFF;
     --text-secondary: #BEBEBE;
+    --alert: #FF7A7A;
 }
 
 body {
     background: var(--background);
     font-family: 'Poppins', sans-serif;
     color: var(--text-primary);
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--div-secondary)
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--div-secondary);
+    border-radius: 2px;
+}
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--div-secondary) var(--div-secondary);
+}
+
+*::-webkit-scrollbar {
+    width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+    background: var(--div-secondary);
+}
+
+*::-webkit-scrollbar-thumb {
+    background: var(--text-primary);
+    border-radius: 2px;
 }
 
 h1 {
@@ -35,6 +69,10 @@ nav {
 
 a {
     text-decoration: none;
+}
+
+p {
+    margin: 0;
 }
 
 .br__8 {
@@ -116,4 +154,90 @@ a {
     font-style: normal;
     font-weight: 200;
     line-height: 1.875rem;
+}
+
+.large__gutter {
+    padding-left: 70px;
+}
+
+.post__container {
+    padding: 20px;
+    border-radius: 8px;
+    background: var(--div-primary);
+}
+
+.post__thumbnail {
+    width: 100%;
+    height: 280px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.post__tag {
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 200;
+    line-height: 0.9375rem;
+    color: var(--text-secondary);
+    border-radius: 4px;
+    background: var(--div-secondary);
+    padding: 5px 10px;
+    margin-bottom: 15px;
+}
+
+.post__title {
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 10px;
+}
+
+.post__description {
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 1.875rem;
+    color: var(--text-secondary);
+}
+
+.like__count {
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 0.9375rem;
+    color: var(--text-secondary);
+    margin-top: 10px;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.sticky-column {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 5rem;
+}
+
+.primary__input {
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    padding: 6px 10px;
+    background: var(--div-secondary);
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    color: var(--text-secondary);
+}
+
+.login__button:hover {
+    background: var(--div-extra);
+}
+
+@media (max-width: 992px) {
+    .large__gutter {
+        padding-left: 0.75rem;
+    }
 }
