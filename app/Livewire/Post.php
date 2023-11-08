@@ -10,7 +10,7 @@ use Livewire\WithPagination;
 class Post extends Component
 {
     use WithPagination;
-    public $perPage = 1;
+    public $perPage = 5;
     public $isLiked = false;
 
     public function toggleLike(PostModel $post)
@@ -32,12 +32,12 @@ class Post extends Component
 
     public function loadMore()
     {
-        $this->perPage += 2;
+        $this->perPage += 5;
     }
 
     public function render()
     {        
-        $posts = PostModel::paginate($this->perPage);
+        $posts = PostModel::orderBy('created_at', 'desc')->paginate($this->perPage);
         $userLikedPosts = Likes::where('user_id', auth()->id())
         ->pluck('post_id')
         ->all();

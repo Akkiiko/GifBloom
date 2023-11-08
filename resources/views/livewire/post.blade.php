@@ -18,7 +18,7 @@
         </div>
         
         <div class="text-center">
-            <a class="pointer" wire:click="toggleLike({{$post}})">
+            <a class="pointer" @auth wire:click="toggleLike({{$post}})" @endauth>
                 @if (in_array($post->id, $userLikedPosts))
                     <img alt="Like icon" src="/images/icons/liked.png">
                 @else

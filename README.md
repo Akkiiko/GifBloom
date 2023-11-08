@@ -1,4 +1,4 @@
-<p align="center"><img src="https://i.imgur.com/3s4mRrd.png" alt="project-image"></p>
+<p align="center"><img src="https://i.imgur.com/VY8OhVH.png" alt="project-image"></p>
 
 ## Learn about GifBloom
 
