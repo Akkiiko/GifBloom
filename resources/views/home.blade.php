@@ -19,7 +19,7 @@
         </div>
         <div class="col-12 col-lg-9 large__gutter">
             <div>
-                <livewire:post lazy />
+                <livewire:postList lazy />
             </div>
         </div>
     </div>

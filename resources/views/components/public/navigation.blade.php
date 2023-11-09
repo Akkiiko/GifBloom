@@ -10,8 +10,7 @@
 
         <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
             <ul class="navbar-nav">
-                <li class="navbar__link"><a href="">Explore</a></li>
-                <li class="navbar__link"><a href="">Trending</a></li>
+                <li class="navbar__link"><a href={{ route('home') }}>Explore</a></li>
                 <li class="navbar__link"><a href="">Following</a></li>
             </ul>
             <ul class="navbar-nav align-items-center">

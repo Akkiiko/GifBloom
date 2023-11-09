@@ -2,8 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,9 +18,14 @@ use App\Http\Controllers\Auth\LoginController;
 */
 
 Route::get('/', [HomeController::class, 'view'])->name('home');
+Route::get('/post/{post}', [PostController::class, 'viewPost'])->name('view.post');
+Route::get('/profile/{user}', [])->name('profile');
 
 Route::middleware(['guest'])->group(function () {
+    Route::get('/login', function () {return redirect()->route('home');});
     Route::post('/login', [LoginController::class, 'login'])->name('login');
+    
+    Route::get('/register', function () {return redirect()->route('home');});
     Route::post('/register', [RegisterController::class, 'register'])->name('register');
 });
 
