@@ -3,7 +3,6 @@
 namespace App\Livewire;
 
 use App\Models\Likes;
-use App\Models\Post as PostModel;
 use Livewire\Component;
 
 class Post extends Component
