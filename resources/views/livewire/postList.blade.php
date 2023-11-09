@@ -19,7 +19,7 @@
                 </div>
                 
                 <div class="text-center">
-                    <a class="pointer" @auth wire:click="toggleLike({{$post}})" @endauth>
+                    <a class="pointer" @auth wire:click="toggleLike({{$post}})" @else data-bs-toggle="modal" data-bs-target="#loginModal" @endauth>
                         @if (in_array($post->id, $userLikedPosts))
                             <img alt="Like icon" src="/images/icons/liked.png">
                         @else

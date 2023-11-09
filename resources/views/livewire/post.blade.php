@@ -16,8 +16,8 @@
         </div>
         
         <div class="text-center">
-            <a class="pointer" @auth wire:click="toggleLike()" @endauth>
-                @if (in_array($post->id, auth()->user()->likes->pluck('id')->all()))
+            <a class="pointer" @auth wire:click="toggleLike()" @else data-bs-toggle="modal" data-bs-target="#loginModal" @endauth>
+                @if (Auth::check() && in_array($post->id, auth()->user()->likes->pluck('id')->all()))
                     <img alt="Like icon" src="/images/icons/liked.png">
                 @else
                     <img alt="Like icon" src="/images/icons/unliked.png">

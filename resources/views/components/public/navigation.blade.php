@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark mx-auto">
     <div class="container">
-        <a href="" class="navbar-brand">
+        <a  href={{ route('home') }} class="navbar-brand">
             <img class="navbar__logo" draggable="false" alt="Logo of {{ config('app.name') }}" src="{{ asset('/images/branding/logonotext.png') }}">
         </a>
 
@@ -15,7 +15,7 @@
             </ul>
             <ul class="navbar-nav align-items-center">
                 <a class="secondary__button" href=""><img id="upload__icon" width="12" height="12" src="{{ asset('/images/icons/addition.png') }}">Upload</a>
-                @if(!Auth::check()) 
+                @guest
                 <a class="primary__button pointer" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
                 @else 
                 <li class="navbar__link"><a href="">{{Auth::user()->username }}</a></li>
