@@ -12,7 +12,7 @@ class PostComment extends Component
 
     public function save($id)
     {
-        $data = $this->validate([
+        $this->validate([
             'content' => 'required|string|min:3',
         ]);
 
@@ -24,7 +24,7 @@ class PostComment extends Component
 
         $this->content = '';
 
-        return redirect()->route('view.post', ['post' => $id]); 
+        $this->dispatch('comment-created', postId: $id);
     }
 
     public function render()
