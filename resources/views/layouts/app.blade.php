@@ -15,6 +15,10 @@
 
 <body>
 
+    @auth
+        <livewire:post.create-post />
+    @endauth
+
     @if(!Auth::check())
     <x-public.auth.login />
     <x-public.auth.register />

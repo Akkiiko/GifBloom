@@ -1,11 +1,3 @@
-.modal-body,
-.modal-content {
-    background: var(--div-primary);
-    border: none;
-    border-radius: 8px;
-    min-height: 424px;
-}
-
 .modal__image {
     border-radius: 0.5rem 0rem 0rem 0.5rem;
     background: url('/images/header__background.png'), #131313;

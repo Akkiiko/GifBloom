@@ -20,6 +20,8 @@
             
             <livewire:post.post :post="$post" lazy.defer />
 
+            <p>{{ count($post->comments) }} Comments</p>
+
             <livewire:post.create-comment lazy.defer :id="$post->id" />
 
             <livewire:post.comment-list lazy.defer :comments="$post->comments" />

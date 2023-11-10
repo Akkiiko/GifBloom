@@ -268,6 +268,72 @@ p {
     font-size: 16px;
 }
 
+.navbar__link > a > img {
+    margin-top: -4px;
+    margin-left: 5px;
+}
+
+.navbar__link:last-of-type {
+    margin-right: 0;
+}
+
+.modal-body,
+.modal-content {
+    background: var(--div-primary);
+    border: none;
+    border-radius: 8px;
+}
+
+.upload__post {
+    background: var(--div-secondary);
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    color: var(--text-secondary);
+    height: 100px;
+    margin-top: 10px;
+    font-weight: 200;
+    font-size: 1rem;
+    font-style: normal;
+    padding: 10px;
+}
+
+.post__button:hover {
+    background: var(--div-extra);
+}
+
+.custom-file-input {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    display: inline-block;
+}
+
+.custom-file-input input {
+    position: absolute;
+    font-size: 100px;
+    right: 0;
+    top: 0;
+    width: 100%;
+    opacity: 0;
+}
+
+.custom-file-input label {
+    display: inline-block;
+    background: var(--div-secondary);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+}
+
+.custom-file-input input:hover + label,
+.custom-file-input input:focus + label {
+    background: #357ae8;
+}
+
 @media (max-width: 992px) {
     .large__gutter {
         padding-left: 0.75rem;

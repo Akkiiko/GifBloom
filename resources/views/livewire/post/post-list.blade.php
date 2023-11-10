@@ -2,8 +2,8 @@
     @foreach($posts as $post)
     <a href="{{ route('view.post', $post) }}">
         <div class="post__container mb-4">
-            <div class="post__thumbnail mb-4" style="background: linear-gradient(0deg, rgba(33, 33, 33, 0.85) 0%, rgba(33, 33, 33, 0.85) 100%), url('{{ $post->thumbnail }}'); background-repeat: no-repeat; background-size: cover; background-position-y: 50%;">
-                <img alt="{user}'s image of {title}" class="h-100" src="{{ $post->thumbnail }}">
+            <div class="post__thumbnail mb-4" style="background: linear-gradient(0deg, rgba(33, 33, 33, 0.85) 0%, rgba(33, 33, 33, 0.85) 100%), url('{{ "/storage/$post->thumbnail" }}'); background-repeat: no-repeat; background-size: cover; background-position-y: 50%;">
+                <img alt="{user}'s image of {title}" class="h-100" src="{{ "/storage/$post->thumbnail" }}">
             </div>
         
             <div class="d-flex justify-content-between">
