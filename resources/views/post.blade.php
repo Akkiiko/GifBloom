@@ -18,11 +18,11 @@
                 </div>
             </div>
             
-            <livewire:post :post="$post" lazy />
+            <livewire:post.post :post="$post" lazy.defer />
 
-            <livewire:post-comment :id="$post->id" />
+            <livewire:post.create-comment lazy.defer :id="$post->id" />
 
-            <livewire:post.commentlist lazy.defer :comments="$post->comments" />
+            <livewire:post.comment-list lazy.defer :comments="$post->comments" />
         </div>
     </div>
 </div>

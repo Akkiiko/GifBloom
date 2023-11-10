@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire;
+namespace App\Livewire\Post;
 
 use App\Models\Likes;
 use App\Models\Post as PostModel;
@@ -41,7 +41,7 @@ class PostList extends Component
         ->pluck('post_id')
         ->all();
 
-        return view('livewire.postList', [
+        return view('livewire.post.post-list', [
             'posts' => $posts,
             'userLikedPosts' => $userLikedPosts
         ]);

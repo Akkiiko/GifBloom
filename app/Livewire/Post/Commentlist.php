@@ -6,7 +6,7 @@ use Livewire\Component;
 use App\Models\Comments;
 use Livewire\Attributes\On; 
 
-class Commentlist extends Component
+class CommentList extends Component
 {
     public $comments;
 
@@ -18,6 +18,6 @@ class Commentlist extends Component
 
     public function render()
     {
-        return view('livewire.post.commentlist');
+        return view('livewire.post.comment-list');
     }
 }

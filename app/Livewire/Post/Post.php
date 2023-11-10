@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire;
+namespace App\Livewire\Post;
 
 use App\Models\Likes;
 use Livewire\Component;
@@ -28,6 +28,6 @@ class Post extends Component
 
     public function render()
     {        
-        return view('livewire.post');
+        return view('livewire.post.post');
     }    
 }

@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Livewire;
+namespace App\Livewire\Post;
 
 use Livewire\Component;
 use App\Models\Comments;
 
-class PostComment extends Component
+class CreateComment extends Component
 {
     public $content = '';
     public $id;
@@ -29,6 +29,6 @@ class PostComment extends Component
 
     public function render()
     {
-        return view('livewire.post-comment');
+        return view('livewire.post.create-comment');
     }
 }
