@@ -9,7 +9,7 @@
         </button>
 
         <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
-            <ul class="navbar-nav">
+            <ul class="navbar-nav text-center">
                 <li class="navbar__link"><a href={{ route('home') }}>Explore</a></li>
                 <li class="navbar__link"><a href="">Following</a></li>
             </ul>
