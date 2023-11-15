@@ -8,9 +8,8 @@
     <meta property="og:title" content="@yield('title', 'Laravel')" />
     <meta property="og:image" content='{{ asset('/images/branding/banner.png') }}' />
     <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.min.css') }}">
-    @if(!Auth::check())<link rel="stylesheet" type="text/css" href="{{ asset('css/auth.css') }}">
+    @if(!Auth::check())<link rel="stylesheet" type="text/css" href="{{ asset('css/auth.css') }}"> @endif
     <link rel="stylesheet" type="text/css" href="{{ asset('css/styles.css') }}">
-    @endif
 </head>
 
 <body>
