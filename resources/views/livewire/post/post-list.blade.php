@@ -1,4 +1,6 @@
 <div>
+
+    @if (count($posts))
     @foreach($posts as $post)
     <a href="{{ route('view.post', $post) }}">
         <div class="post__container mb-4">
@@ -33,6 +35,9 @@
         </div>
     </a>
 @endforeach
+@else 
+<x-public.posts.notfound />
+@endif
 
 <div
     x-data="{
