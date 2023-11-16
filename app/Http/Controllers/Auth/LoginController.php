@@ -24,6 +24,6 @@ class LoginController extends Controller
         }
 
         $request->session()->flash('password');
-        return redirect()->route('home')->withErrors($data, 'login');
+        return redirect()->route('home')->withErrors($data, 'login')->withInput();
     }
 }

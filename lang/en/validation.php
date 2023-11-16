@@ -170,9 +170,11 @@ return [
         'registerUsername' => [
             'min' => 'Min 3 characters!',
             'max' => 'No more than 32 characters!',
+            'unique' => 'Username taken!',
         ],
         'registerPassword' => [
             'confirmed' => 'Passwords do not match.',
+            'min' => 'Must be 6 characters or more',
         ],
     ],
 
