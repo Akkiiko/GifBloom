@@ -173,6 +173,11 @@ p {
     border-radius: 8px;
 }
 
+.thumbnail {
+    max-width: 100%;
+    object-fit: contain;
+}
+
 .post__tag {
     font-size: 0.875rem;
     font-style: normal;
@@ -333,6 +338,37 @@ p {
 .custom-file-input input:focus + label {
     background: #357ae8;
 }
+
+.navbar__link .dropdown-content {
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    background-color: var(--div-primary);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    transition: opacity 0.5s ease, visibility 0.5s ease; 
+}
+
+.navbar__link .dropdown-content a {
+    color: var(--text-primary);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.navbar__link .dropdown-content a:hover {
+    background-color: var(--div-secondary);
+}
+
+.navbar__link:hover .dropdown-content {
+    opacity: 1; 
+    visibility: visible;
+}
+
 
 @media (max-width: 992px) {
     .large__gutter {

@@ -19,12 +19,18 @@
                 <a class="primary__button pointer" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
                 @else 
                 <li class="navbar__link">
-                    <a href="">
-                        {{Auth::user()->username }}
+                    <a href="#">
+                        {{ Auth::user()->username }}
                         <img alt="Arrow pointing down" src="{{ asset('/images/icons/down_arrow.png') }}">
                     </a>
+
+                    <div class="dropdown-content">
+                        <a href="/profile/{{ Auth::user()->id }}">Profile</a>
+                        <a href="/account/settings">Settings</a>
+                        <a href="/logout">Logout</a>
+                    </div>
                 </li>
-                @endif
+                @endif                
             </ul>
         </div>
     </div>
