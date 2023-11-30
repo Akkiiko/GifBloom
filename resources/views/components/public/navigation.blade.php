@@ -18,7 +18,7 @@
                 @guest
                 <a class="primary__button pointer" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
                 @else 
-                <li class="navbar__link">
+                <li class="navbar__link position-relative">
                     <a href="#">
                         {{ Auth::user()->username }}
                         <img alt="Arrow pointing down" src="{{ asset('/images/icons/down_arrow.png') }}">
