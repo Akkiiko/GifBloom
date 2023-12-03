@@ -4,7 +4,7 @@
     </div>
 
     <div class="d-flex justify-content-between">
-        <div>
+        <div class="text-wrap">
             <div class="d-flex gap-2">
                 <p class="post__tag">#tokyo</p>
                 <p class="post__tag">#japan</p>

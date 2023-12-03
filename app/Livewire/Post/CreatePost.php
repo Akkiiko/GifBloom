@@ -20,8 +20,8 @@ class CreatePost extends Component
     public function save()
     {
         $this->validate([ 
-            'title' => 'required|min:3|string',
-            'content' => 'required|min:3|string',
+            'title' => 'required|min:3|max:200|string',
+            'content' => 'required|min:3|max:400|string',
             'photo' => 'required'
         ]);
 

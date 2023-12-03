@@ -196,6 +196,9 @@ p {
     font-weight: 400;
     line-height: normal;
     margin-bottom: 10px;
+    height: auto;
+    overflow: hidden;
+    word-wrap: break-word;
 }
 
 .post__description {
@@ -394,6 +397,12 @@ p {
 .comment__delete {
     background: none;
     border: none;
+}
+
+.text-wrap {
+    height: auto;
+    overflow: hidden;
+    word-wrap: break-word;
 }
 
 @media (max-width: 992px) {

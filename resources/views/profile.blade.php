@@ -17,7 +17,7 @@
 
     <div class="row mt-4">
         <div class="col-12 col-lg-9 m-auto">
-            <livewire:post.post-list lazy.defer />
+
         </div>
     </div>
 </div>
