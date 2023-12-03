@@ -6,7 +6,7 @@
         <div class="d-flex justify-content-between">
             <div class="d-flex gap-2">
                 <img src="{{ $comment->user->avatar }}" width="30" height="30" class="br__8">
-                <p class="comment__text post__title m-0">{{ $comment->user->username }}</p>
+                <a href="/profile/{{ $comment->user->username }}" class="comment__text post__title m-0">{{ $comment->user->username }}</a>
             </div>
             <p class="comment__text post__description m-0">{{ $comment->created_at->format('l jS F Y') }}</p>
         </div>

@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark mx-auto">
     <div class="container">
-        <a  href={{ route('home') }} class="navbar-brand">
+        <a href={{ route('home') }} class="navbar-brand">
             <img class="navbar__logo" draggable="false" alt="Logo of {{ config('app.name') }}" src="{{ asset('/images/branding/logonotext.png') }}">
         </a>
 
@@ -25,7 +25,7 @@
                     </a>
 
                     <div class="dropdown-content">
-                        <a href="/profile/{{ Auth::user()->id }}">Profile</a>
+                        <a href="/profile/{{ Auth::user()->username }}">Profile</a>
                         <a href="/account/settings">Settings</a>
                         <a href="/logout">Logout</a>
                     </div>

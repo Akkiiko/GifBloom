@@ -10,7 +10,7 @@
             <div class="mb-4 d-flex gap-0 align-items-center">
                 <img src="/images/users/defaultAvatar.png" width="45" height="45" class="br__8">
                 <div class="w-100" style="margin-left: 15px;">
-                    <a href={{ route('profile', $post->user) }} class="post__title mb-0">{{ $post->user->username }}</a>
+                    <a href={{ route('profile', $post->user->username) }} class="post__title mb-0">{{ $post->user->username }}</a>
                     <div class="d-flex justify-content-between align-items-center">
                         <p class="post__description">{{ $post->created_at->format('l jS F Y') }}</p>
                         <a href={{ route('profile', $post->user) }} class="post__description">View Profile</a>
