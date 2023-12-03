@@ -247,7 +247,7 @@ p {
     padding: 20px;
 }
 
-.comment__input > textarea {
+.comment__input>textarea {
     background: var(--div-secondary);
     border: none;
     padding: 10px;
@@ -271,9 +271,12 @@ p {
 
 .comment__text {
     font-size: 16px;
+    height: auto;
+    overflow: hidden;
+    word-wrap: break-word;
 }
 
-.navbar__link > a > img {
+.navbar__link>a>img {
     margin-top: -4px;
     margin-left: 5px;
 }
@@ -341,12 +344,12 @@ p {
     position: absolute;
     background-color: var(--div-primary);
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
     border-radius: 8px;
     left: -30px;
     top: 40px;
-    transition: opacity 0.5s ease, visibility 0.5s ease; 
+    transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 
 .navbar__link .dropdown-content a {
@@ -373,7 +376,7 @@ p {
 }
 
 .navbar__link:hover .dropdown-content {
-    opacity: 1; 
+    opacity: 1;
     visibility: visible;
 }
 
@@ -386,6 +389,11 @@ p {
 .profile__avatar {
     box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.40);
     border-radius: 20px;
+}
+
+.comment__delete {
+    background: none;
+    border: none;
 }
 
 @media (max-width: 992px) {

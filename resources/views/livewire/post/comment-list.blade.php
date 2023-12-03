@@ -1,8 +1,17 @@
 <div>
     @foreach ($comments->reverse() as $comment)
     <div class="comment br__8 mb-4">
-        <p class="comment__text post__description mb-3">“{{ $comment->content }}”</p>
-        
+        <div class="d-flex justify-content-between gap-3">
+            <p class="comment__text post__description mb-3">“{{ $comment->content }}”</p>
+            @auth
+            @if($comment->user->id == Auth::user()->id)
+            <form wire:confirm="Are you sure you want to delete this post?" wire:submit="delete({{ $comment->id }})">
+                <button class="comment__delete"><img alt="Trash icon" src="{{ asset('/images/icons/trash.png') }}"></button>
+            </form>
+            @endif
+            @endauth
+        </div>
+
         <div class="d-flex justify-content-between">
             <div class="d-flex gap-2">
                 <img src="{{ $comment->user->avatar }}" width="30" height="30" class="br__8">
