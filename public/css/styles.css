@@ -377,6 +377,17 @@ p {
     visibility: visible;
 }
 
+.profile__header {
+    padding: 30px;
+    background: linear-gradient(0deg, rgba(33, 33, 33, 0.20) 0%, rgba(33, 33, 33, 0.20) 100%), linear-gradient(272deg, #FF7EB3 0%, #FFD1E4 99.23%);
+    border-radius: 20px;
+}
+
+.profile__avatar {
+    box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.40);
+    border-radius: 20px;
+}
+
 @media (max-width: 992px) {
     .large__gutter {
         padding-left: 0.75rem;

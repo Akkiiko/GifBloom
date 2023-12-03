@@ -6,8 +6,18 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-12 col-lg-8 m-auto">
-            {{ $user->username }}
+        <div class="col-12 col-lg-9 m-auto">
+            <x-public.profile.header :user="$user" />
+        </div>
+
+        <div class="col-12 col-lg-9 m-auto mt-4">
+            <p>Recent Posts</p>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-12 col-lg-9 m-auto">
+            <livewire:post.post-list lazy.defer />
         </div>
     </div>
 </div>
