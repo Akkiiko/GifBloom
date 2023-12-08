@@ -25,7 +25,7 @@ class CommentList extends Component
     {
         Comments::where('id', $id)->delete();
 
-        $this->comments = Comments::where('post_id', $id)->get();
+        $this->comments = Comments::where('post_id', $this->id)->get();
     }
 
     public function render()
