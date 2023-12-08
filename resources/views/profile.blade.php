@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'GifBloom - {USER} Profile')
+@section('title', "GifBloom - $user->username's Profile")
 
 @section('content')
 
