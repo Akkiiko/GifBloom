@@ -22,14 +22,6 @@ Route::get('/', [HomeController::class, 'view'])->name('home');
 Route::get('/post/{post}', [PostController::class, 'viewPost'])->name('view.post');
 Route::get('/profile/{username}', [ProfileController::class, 'profile'])->name('profile');
 
-Route::middleware(['guest'])->group(function () {
-    Route::get('/login', function () {return redirect()->route('home');});
-    Route::post('/login', [LoginController::class, 'login'])->name('login');
-    
-    Route::get('/register', function () {return redirect()->route('home');});
-    Route::post('/register', [RegisterController::class, 'register'])->name('register');
-});
-
 Route::get('/logout', function () {
     auth()->logout();
 
