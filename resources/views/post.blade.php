@@ -13,7 +13,7 @@
                     <a href={{ route('profile', $post->user->username) }} class="post__title mb-0">{{ $post->user->username }}</a>
                     <div class="d-flex justify-content-between align-items-center">
                         <p class="post__description">{{ $post->created_at->format('l jS F Y') }}</p>
-                        <a href={{ route('profile', $post->user) }} class="post__description">View Profile</a>
+                        <a href={{ route('profile', $post->user->username) }} class="post__description">View Profile</a>
                     </div>
                 </div>
             </div>

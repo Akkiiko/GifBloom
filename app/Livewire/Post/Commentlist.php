@@ -23,7 +23,11 @@ class CommentList extends Component
 
     public function delete($id)
     {
-        Comments::where('id', $id)->delete();
+        $comment = Comments::find($id);
+
+        if($comment->user_id === auth()->user()->id) {
+            $comment->delete();
+        }
 
         $this->comments = Comments::where('post_id', $this->id)->get();
     }
