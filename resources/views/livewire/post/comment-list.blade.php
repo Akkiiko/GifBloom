@@ -1,4 +1,8 @@
 <div>
+    <p class="mb-4">{{ count($comments) }} Comments</p>
+
+    <livewire:post.create-comment lazy.defer :id="$id" />
+
     @foreach ($comments->reverse() as $comment)
     <div class="comment br__8 mb-4">
         <div class="d-flex justify-content-between gap-3">

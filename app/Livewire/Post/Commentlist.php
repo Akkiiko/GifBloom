@@ -8,7 +8,12 @@ use Livewire\Attributes\On;
 
 class CommentList extends Component
 {
+    public $id;
     public $comments;
+
+    public function mount() {
+        $this->comments = Comments::where('post_id', $this->id)->get();
+    }
 
     #[On('comment-created')] 
     public function updateCommentList($postId)
