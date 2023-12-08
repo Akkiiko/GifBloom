@@ -164,15 +164,15 @@ return [
     */
 
     'custom' => [
-        'registerEmail' => [
+        'email' => [
             'unique' => 'Email taken!'
         ],
-        'registerUsername' => [
+        'username' => [
             'min' => 'Min 3 characters!',
             'max' => 'No more than 32 characters!',
             'unique' => 'Username taken!',
         ],
-        'registerPassword' => [
+        'password' => [
             'confirmed' => 'Passwords do not match.',
             'min' => 'Must be 6 characters or more',
         ],

@@ -19,34 +19,39 @@
     @endauth
 
     @if(!Auth::check())
-    <x-public.auth.login />
-    <x-public.auth.register />
-
-    @if(session('show_login')) 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var loginModal = document.getElementById('loginModal');
+    <div class="modal fade" id="loginModal" tabindex="-1"  aria-labelledby="loginModal" aria-hidden="true"> 
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content" style="height: 424px;">
+            <div class="modal-body p-0 d-flex alin gap-2">
+              <div class="modal__image"></div>
+              <div class="w-100 py-4 px-2">
+                <p class="post__title">Login</p>
+                <p class="login__description">Welcome back, login to your account!</p>
     
-            if (loginModal) {
-                var modal = new bootstrap.Modal(loginModal);
-                modal.show();
-            }
-        });
-    </script>
-    @endif
-
-    @if(session('show_register')) 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var loginModal = document.getElementById('registerModal');
+                <livewire:auth.login />
     
-            if (loginModal) {
-                var modal = new bootstrap.Modal(registerModal);
-                modal.show();
-            }
-        });
-    </script>
-    @endif
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<div class="modal fade" id="registerModal" tabindex="-1"  aria-labelledby="registerModal" aria-hidden="true"> 
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content" style="height: 594px">
+        <div class="modal-body p-0 d-flex alin gap-2">
+          <div class="modal__image"></div>
+          <div class="w-100 py-4 px-2">
+            <p class="post__title">Register</p>
+            <p class="login__description">Welcome, please make an account!</p>
+            
+            <livewire:auth.register />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
     @endif
 
