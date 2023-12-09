@@ -397,4 +397,12 @@ p {
     .large__gutter {
         padding-left: 0.75rem;
     }
+
+    .modal__image {
+        display: none;
+    }
+
+    .modal-body {
+        padding: 10px!important;
+    }
 }
