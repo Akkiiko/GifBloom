@@ -21,7 +21,7 @@
             <div class="row">
                 @foreach ($user->posts as $post)
                 <div class="col-12 col-md-6 col-lg-6 mb-4">
-                    <a href="{{ route('view.post', $post) }}">
+                    <a class="text-wrap" href="{{ route('view.post', $post) }}">
                         <livewire:post.post :post="$post" />  
                     </a>        
                 </div>
