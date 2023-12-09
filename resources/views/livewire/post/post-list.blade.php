@@ -10,12 +10,6 @@
         
             <div class="d-flex justify-content-between text-wrap">
                 <div>
-                    <div class="d-flex gap-2">
-                        <p class="post__tag">#tokyo</p>
-                        <p class="post__tag">#japan</p>
-                        <p class="post__tag">#photograph</p>
-                    </div>
-                
                     <p class="post__title">{{ $post->title }}</p>
                     <p class="post__description">{{ $post->content }}</p>
                 </div>

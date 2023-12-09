@@ -178,18 +178,6 @@ p {
     object-fit: contain;
 }
 
-.post__tag {
-    font-size: 0.875rem;
-    font-style: normal;
-    font-weight: 200;
-    line-height: 0.9375rem;
-    color: var(--text-secondary);
-    border-radius: 4px;
-    background: var(--div-secondary);
-    padding: 5px 10px;
-    margin-bottom: 15px;
-}
-
 .post__title {
     color: var(--text-primary);
     font-size: 1.125rem;

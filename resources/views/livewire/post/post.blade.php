@@ -4,13 +4,7 @@
     </div>
 
     <div class="d-flex justify-content-between">
-        <div class="text-wrap">
-            <div class="d-flex gap-2">
-                <p class="post__tag">#tokyo</p>
-                <p class="post__tag">#japan</p>
-                <p class="post__tag">#photograph</p>
-            </div>
-        
+        <div class="text-wrap">        
             <p class="post__title">{{ $post->title }}</p>
             <p class="post__description">{{ $post->content }}</p>
         </div>
