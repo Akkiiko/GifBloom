@@ -1,7 +1,5 @@
 ![Image](https://i.imgur.com/VY8OhVH.png")
         
-
-
 ## Learn about GifBloom
 
 Welcome to GifBloom, an innovative open-source image sharing platform that seamlessly combines the ease of Imgur with the captivating addictiveness of TikTok. 
@@ -32,6 +30,27 @@ GifBloom is not just another image-sharing platform; it's a creative outlet wher
     <summary>Upload Modal</summary>
     <p align="center"><img src="https://i.imgur.com/NnGQEgQ.png" alt="Upload modal"></p>
 </details>
+
+## Prerequisites
+
+ - [PHP](https://www.php.net/)
+ - [Composer](https://getcomposer.org/)
+ - [MySQL](https://www.mysql.com/)
+
+## Setup Guide
+
+```
+    git clone https://github.com/michaeltukdev/GifBloom.git
+    cd GifBloom
+    composer install
+    rename .env.example to .env
+    modify the .env files
+    php artisan key:generate
+    php artisan migrate
+    php artisan storage:link
+    php artisan serve
+```
+
 
 ## Acknowledgements
 
