@@ -8,7 +8,7 @@
     <div class="row">
         <div class="col-sm-12 col-lg-9 m-auto">
             <div class="mb-4 d-flex gap-0 align-items-center">
-                <img src="/images/users/defaultAvatar.png" width="45" height="45" class="br__8">
+                <img src="{{ $post->user->avatar }}" width="45" height="45" class="br__8">
                 <div class="w-100" style="margin-left: 15px;">
                     <a href={{ route('profile', $post->user->username) }} class="post__title mb-0">{{ $post->user->username }}</a>
                     <div class="d-flex justify-content-between align-items-center">

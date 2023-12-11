@@ -380,6 +380,8 @@ p {
 .profile__avatar {
     box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.40);
     border-radius: 20px;
+    width: 117px;
+    height: 117px;
 }
 
 .comment__delete {
@@ -391,6 +393,41 @@ p {
     height: auto;
     overflow: hidden;
     word-wrap: break-word;
+}
+
+.upload__avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100%;
+    width: 100%;
+    margin: 0 30px;
+    border: 2px dashed var(--div-secondary);
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#avatar {
+    display: none;
+}
+
+.avatar__label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.avatar__label > p {
+    color: var(--text-secondary);
+    font-weight: 300;
+}
+
+.new__avatar {
+    object-fit: cover;
 }
 
 @media (max-width: 992px) {

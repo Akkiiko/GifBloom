@@ -3,9 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\Auth\LoginController;
-use App\Http\Controllers\Auth\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,6 +20,10 @@ use App\Http\Controllers\Auth\RegisterController;
 Route::get('/', [HomeController::class, 'view'])->name('home');
 Route::get('/post/{post}', [PostController::class, 'viewPost'])->name('view.post');
 Route::get('/profile/{username}', [ProfileController::class, 'profile'])->name('profile');
+
+Route::prefix('account')->middleware('auth')->group(function () {
+    Route::get('/settings', [UserController::class, 'settings'])->name('profile.settings');
+});
 
 Route::get('/logout', function () {
     auth()->logout();
