@@ -11,6 +11,8 @@ GifBloom is not just another image-sharing platform; it's a creative outlet wher
 
 ## Previews
 
+[Figma File](https://www.figma.com/file/KtM48Gx9he3bQAvDvzXVeU/GifBloom?type=design&node-id=0%3A1&mode=design&t=pncRruIrGg2ZKCfY-1)
+
 <details>
     <summary>Landing Page</summary>
     <p align="center"><img src="https://i.imgur.com/rUB4NUC.png" alt="Project landing page"></p>
