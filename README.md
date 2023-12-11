@@ -39,16 +39,24 @@ GifBloom is not just another image-sharing platform; it's a creative outlet wher
 
 ## Setup Guide
 
-```
-    git clone https://github.com/michaeltukdev/GifBloom.git
-    cd GifBloom
-    composer install
-    rename .env.example to .env
-    modify the .env files
-    php artisan key:generate
-    php artisan migrate
-    php artisan storage:link
-    php artisan serve
+```bash
+git clone https://github.com/michaeltukdev/GifBloom.git
+
+cd GifBloom
+
+composer install
+
+rename .env.example to .env
+
+modify the .env files
+
+php artisan key:generate
+
+php artisan migrate
+
+php artisan storage:link
+
+php artisan serve
 ```
 
 
