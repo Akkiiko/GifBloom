@@ -20,7 +20,7 @@
             
             <livewire:post.post :post="$post" lazy.defer />
 
-            <livewire:post.comment-list lazy.defer :id="$post->id" />
+            <livewire:post.Commentlist lazy.defer :id="$post->id" />
         </div>
     </div>
 </div>

@@ -6,6 +6,8 @@ Welcome to GifBloom, an innovative open-source image sharing platform that seaml
 
 GifBloom is not just another image-sharing platform; it's a creative outlet where users can share, discover, and engage with images in a whole new way. 
 
+## Demo
+[Live Demo](https://gifbloom.michaelt.uk/)
 
 ## Previews
 
