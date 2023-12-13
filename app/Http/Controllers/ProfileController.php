@@ -7,13 +7,7 @@ use Illuminate\Http\Request;
 
 class ProfileController extends Controller
 {
-    public function profile($username) {
-        $user = User::where('username', $username)->first();
-        
-        if ($user === null) {
-            return redirect('/');
-        }
-
+    public function profile(User $user) {
         return view('profile', ['user' => $user]);
     }
 }

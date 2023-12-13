@@ -19,7 +19,7 @@ use App\Http\Controllers\ProfileController;
 
 Route::get('/', [HomeController::class, 'view'])->name('home');
 Route::get('/post/{post}', [PostController::class, 'viewPost'])->name('view.post');
-Route::get('/profile/{username}', [ProfileController::class, 'profile'])->name('profile');
+Route::get('/profile/{user:username}', [ProfileController::class, 'profile'])->name('profile');
 
 Route::prefix('account')->middleware('auth')->group(function () {
     Route::get('/settings', [UserController::class, 'settings'])->name('profile.settings');
